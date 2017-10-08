@@ -1,3 +1,5 @@
+import { ProductModule } from './product/product.module';
+import { CartModule } from './cart/cart.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,6 +13,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
+    ProductModule,
+    CartModule,
     AppRoutingModule
   ],
   providers: [],
