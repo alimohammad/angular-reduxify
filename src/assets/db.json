@@ -1,0 +1,28 @@
+{
+  "products":[
+    {
+      "id": 1,
+      "name": "T Shirt",
+      "price": 24,
+      "imageUrl": "https://tinyurl.com/y958r6g8"
+    },
+    {
+      "id": 2,
+      "name": "Jeans",
+      "price": 30,
+      "imageUrl": "https://tinyurl.com/yaw4g9dr"
+    },
+    {
+      "id": 3,
+      "name": "Shirt",
+      "price": 22,
+      "imageUrl": "https://tinyurl.com/y9fo76pp"
+    },
+    {
+      "id": 4,
+      "name": "Jacket",
+      "price": 50,
+      "imageUrl": "https://tinyurl.com/yapz4uz6"
+    }
+  ]
+}
