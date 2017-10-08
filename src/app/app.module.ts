@@ -1,3 +1,4 @@
+import { AppService } from './app.service';
 import { ProductModule } from './product/product.module';
 import { CartModule } from './cart/cart.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +18,7 @@ import { AppComponent } from './app.component';
     CartModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
