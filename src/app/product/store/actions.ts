@@ -38,4 +38,18 @@ export class ProductActions {
     meta: null,
     error
   })
+
+  @dispatch()
+  productSelected = (payload: any): ProductAction => ({
+    type: ProductConstants.PRODUCT_SELECTED,
+    payload,
+    meta: null
+  })
+
+  // @dispatch()
+  // showProductDetail = (): ProductAction => ({
+  //   type: ProductConstants.SHOW_SELECTED_PRODUCT,
+  //   payload: null,
+  //   meta: null
+  // })
 }

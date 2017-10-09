@@ -1,3 +1,6 @@
-<p>
-  product-detail works!
-</p>
+<div *ngIf="selectedProduct$ | async as product">
+  <div>
+    <span>{{product.name}}</span>
+    <img style="width: 100px;" [src]="product.imageUrl" alt="Product Image" />
+  </div>
+</div>

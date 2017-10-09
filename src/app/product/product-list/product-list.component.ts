@@ -28,6 +28,7 @@ export class ProductListComponent implements OnInit {
 
   showThisProductsDetail(product: IProduct) {
     console.log('Product detail page for:', product);
+    this.prodActions.productSelected(product);
     this.router.navigate(['/detail']);
   }
 
