@@ -1,5 +1,7 @@
+import { IProductState, PRODUCT_INITIAL_STATE } from './state';
+import { ProductsActions, ProductAction } from './actions';
+import { ProductConstants } from './constants';
 import { IProduct } from './../model/product';
-import { ProductConstants, ProductAction, ProductsActions, IProductState, PRODUCT_INITIAL_STATE } from './';
 import { Action } from 'redux';
 
 export function productReducer(state: IProductState = PRODUCT_INITIAL_STATE, a: Action): IProductState {

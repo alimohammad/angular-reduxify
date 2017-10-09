@@ -1,4 +1,4 @@
-import { ProductConstants } from './';
+import { ProductConstants } from './constants';
 import { IProduct } from './../model/product';
 import { Injectable } from '@angular/core';
 import { FluxStandardAction } from 'flux-standard-action';

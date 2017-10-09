@@ -1,4 +1,6 @@
-import { ICartState, CART_INITIAL_STATE, CartAction, CartActions, CartConstants } from './';
+import { CartConstants } from './constants';
+import { CartActions, CartAction } from './actions';
+import { ICartState, CART_INITIAL_STATE } from './state';
 import { Action } from 'redux';
 
 export function cartReducer(state: ICartState = CART_INITIAL_STATE, a: Action): ICartState {
