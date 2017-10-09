@@ -23,6 +23,12 @@
       "name": "Jacket",
       "price": 50,
       "imageUrl": "https://tinyurl.com/yapz4uz6"
+    },
+    {
+      "id": 5,
+      "name": "Coat",
+      "price": 60,
+      "imageUrl": "https://tinyurl.com/yapz4uz6"
     }
   ]
 }

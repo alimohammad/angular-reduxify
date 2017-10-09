@@ -1,6 +1,6 @@
 <div>
-    <div *ngIf="productList">
-      <div class=col-md-4 *ngFor="let product of productList">
+    <div *ngIf="productList$ | async">
+      <div class=col-md-4 *ngFor="let product of productList$ | async">
         <span>{{product.name}}</span>
         <img class="img-responsive img-thumbnail" [src]="product.imageUrl" alt="Product Image"/>
         <button (click)="showThisProductsDetail(product)">Detail</button>

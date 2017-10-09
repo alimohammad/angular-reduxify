@@ -9,7 +9,7 @@ interface MetaData { productType: {}; }
 export type ProductAction = FluxStandardAction<Payload, MetaData>;
 
 @Injectable()
-export class ProductsActions {
+export class ProductActions {
   @dispatch()
   getProductList = (): ProductAction => ({
     type: ProductConstants.GET_PRODUCTS,

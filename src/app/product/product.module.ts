@@ -1,3 +1,4 @@
+import { ProductActions } from './store/actions';
 import { productRouting } from './product.routing';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,6 +10,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     CommonModule,
     productRouting
   ],
-  declarations: [ProductListComponent, ProductDetailComponent]
+  declarations: [ProductListComponent, ProductDetailComponent],
+  providers: [ProductActions]
 })
 export class ProductModule { }
