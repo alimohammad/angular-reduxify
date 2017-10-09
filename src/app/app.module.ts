@@ -1,3 +1,4 @@
+import { StoreModule } from './store/store.module';
 import { AppService } from './app.service';
 import { ProductModule } from './product/product.module';
 import { CartModule } from './cart/cart.module';
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpModule,
     NgbModule.forRoot(),
+    StoreModule,
     ProductModule,
     CartModule,
     AppRoutingModule

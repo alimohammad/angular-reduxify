@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './product-list.component.html'
 })
 export class ProductListComponent implements OnInit {
-  private productList: Array<IProduct>;
+  productList: Array<IProduct>;
   constructor(private service: AppService, private router: Router) { }
 
   ngOnInit() {
@@ -19,12 +19,12 @@ export class ProductListComponent implements OnInit {
       });
   }
 
-  public showThisProductsDetail(product: IProduct) {
+  showThisProductsDetail(product: IProduct) {
     console.log('Product detail page for:', product);
     this.router.navigate(['/detail']);
   }
 
-  public addThisProductToCart(product: IProduct) {
+  addThisProductToCart(product: IProduct) {
     console.log('Product to be added to Cart:', product);
   }
 
