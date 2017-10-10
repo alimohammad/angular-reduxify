@@ -5,26 +5,26 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-list',
-  templateUrl: './product-list.component.html'
+  templateUrl: './product-list.component.html',
+  styleUrls: [`./product-list.component.css`]
 })
 export class ProductListComponent implements OnInit {
-  private productList: Array<IProduct>;
+  productList: Array<IProduct>;
   constructor(private service: AppService, private router: Router) { }
 
   ngOnInit() {
     this.service.getProducts()
       .subscribe(s => {
         this.productList = s;
-        console.log(this.productList);
       });
   }
 
-  public showThisProductsDetail(product: IProduct) {
+  showThisProductsDetail(product: IProduct) {
     console.log('Product detail page for:', product);
     this.router.navigate(['/detail']);
   }
 
-  public addThisProductToCart(product: IProduct) {
+  addThisProductToCart(product: IProduct) {
     console.log('Product to be added to Cart:', product);
   }
 
