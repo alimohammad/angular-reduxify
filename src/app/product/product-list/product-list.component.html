@@ -1,10 +1,22 @@
 <div>
-    <div *ngIf="productList$ | async">
-      <div class=col-md-4 *ngFor="let product of productList$ | async">
-        <span>{{product.name}}</span>
-        <img class="img-responsive img-thumbnail" [src]="product.imageUrl" alt="Product Image"/>
-        <button (click)="showThisProductsDetail(product)">Detail</button>
-        <button (click)="addThisProductToCart(product)">Add to Cart</button>
+  <div *ngIf="productList$ | async" class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 product-list-container" *ngFor="let product of productList$ | async">
+        <div class="product-name-wrapper">
+          <span>{{product.name}}</span>
+        </div>
+        <div class="product-img-wrapper">
+          <img class="img-responsive img-thumbnail no-border product-img" [src]="product.imageUrl" alt="Product Image" />
+        </div>
+        <div class="product-buttons-wrapper">
+          <button class="btn btn-info" (click)="showThisProductsDetail(product)">
+             <span class="fa fa-list"></span> Detail
+          </button>
+          <button class="btn btn-success" (click)="addThisProductToCart(product)">
+            <span class="fa fa-shopping-cart"></span> Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   </div>
+</div>
