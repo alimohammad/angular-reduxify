@@ -1,3 +1,4 @@
+import { ProductEpics } from './store/epics';
 import { ProductActions } from './store/actions';
 import { productRouting } from './product.routing';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,6 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     productRouting
   ],
   declarations: [ProductListComponent, ProductDetailComponent],
-  providers: [ProductActions]
+  providers: [ProductActions, ProductEpics]
 })
 export class ProductModule { }

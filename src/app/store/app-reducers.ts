@@ -9,5 +9,5 @@ import { cartReducer } from './../cart/store';
 export const rootReducer = combineReducers<IAppState>({
   product: productReducer,
   cart: cartReducer,
-  // router: routerReducer
+  router: routerReducer
 });

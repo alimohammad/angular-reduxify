@@ -1,6 +1,22 @@
-<div *ngIf="selectedProduct$ | async as product">
-  <div>
-    <span>{{product.name}}</span>
-    <img style="width: 100px;" [src]="product.imageUrl" alt="Product Image" />
+<div *ngIf="selectedProduct$ | async as product" class="row col-md-12">
+  <div class="col-md-4">
+    <div class="row">
+      <div class="product-name-wrapper">
+        <span>{{product.name}}</span>
+      </div>
+      <div class="product-img-wrapper">
+        <img class="img-responsive img-thumbnail no-border product-img" [src]="product.imageUrl" alt="Product Image" />
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div>
+      <span>{{product.details}}</span>
+    </div>
+    <div class="">
+      <button class="btn btn-success" (click)="addThisProductToCart(product)">
+        <span class="fa fa-shopping-cart"></span> Add to Cart
+      </button>
+    </div>
   </div>
 </div>

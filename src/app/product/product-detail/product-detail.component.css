@@ -1,0 +1,27 @@
+.no-border {
+  border: none;
+  height: 400px;
+}
+.product-buttons-wrapper {
+  opacity: 0;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.product-list-container {
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.product-list-container:hover {
+  border: 1px solid #888888;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+.product-list-container:hover .product-buttons-wrapper {
+  opacity: 1;
+}

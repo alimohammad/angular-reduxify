@@ -45,11 +45,4 @@ export class ProductActions {
     payload,
     meta: null
   })
-
-  // @dispatch()
-  // showProductDetail = (): ProductAction => ({
-  //   type: ProductConstants.SHOW_SELECTED_PRODUCT,
-  //   payload: null,
-  //   meta: null
-  // })
 }

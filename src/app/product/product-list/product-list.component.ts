@@ -6,29 +6,28 @@ import { IAppState } from './../../store/app-state';
 import { Router } from '@angular/router';
 import { IProduct } from './../model/product';
 import { AppService } from './../../app.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { select } from '@angular-redux/store';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: [`./product-list.component.css`]
+  styleUrls: [`./product-list.component.css`],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductListComponent implements OnInit {
   @select((s: IAppState) => s.product.products)
   productList$: Observable<IProduct[]>;
   constructor(
-    private service: AppService,
     private router: Router,
     private prodActions: ProductActions,
     private cartActions: CartActions) { }
 
   ngOnInit() {
-    this.service.getProducts();
+    this.prodActions.getProductList();
   }
 
   showThisProductsDetail(product: IProduct) {
-    console.log('Product detail page for:', product);
     this.prodActions.productSelected(product);
     this.router.navigate(['/detail']);
   }
@@ -40,5 +39,4 @@ export class ProductListComponent implements OnInit {
     cartItem.pricePerItem = product.price;
     this.cartActions.addItemToCart(cartItem);
   }
-
 }

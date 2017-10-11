@@ -3,6 +3,7 @@ export interface IProduct {
   name: string;
   price: number;
   imageUrl: string;
+  details: string;
 }
 
 export class Product implements IProduct  {
@@ -10,4 +11,5 @@ export class Product implements IProduct  {
   name: string;
   price: number;
   imageUrl: string;
+  details: string;
 }

@@ -23,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     CartModule,
     AppRoutingModule
   ],
-  providers: [AppService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
