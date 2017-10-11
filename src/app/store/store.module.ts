@@ -20,6 +20,7 @@ export class StoreModule {
     devTools: DevToolsExtension
     // ,ngReduxRouter: NgReduxRouter
   ) {
+    console.log('devtools:', devTools.isEnabled());
     store.configureStore(
       rootReducer,
       INITIAL_STATE,

@@ -1,3 +1,5 @@
+import { IProduct } from './product/model/product';
+import { HttpClient } from '@angular/common/http';
 import { ProductActions } from './product/store/actions';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
@@ -8,12 +10,11 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class AppService {
 
-  constructor(private http: Http, private productActions: ProductActions) { }
+  constructor(private http: HttpClient, private productActions: ProductActions) { }
 
   getProducts() {
     this.productActions.getProductList();
-    return this.http.get('http://localhost:3000/products')
-      .map(this.extractData)
+    return this.http.get<IProduct[]>('http://localhost:3000/products')
       .subscribe((response: any) => {
         this.productActions.getProductListSucceeded(response);
       }, (error: any) => {
