@@ -17,11 +17,11 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit() {
     this.selectedProduct$.subscribe((s) => {
-      if (s.id === 5) {
+      if (s.id === 4) {
         this.addToCartVisibility = false;
         throw new DOMException();
       }
-    })
+    });
   }
 
 }
